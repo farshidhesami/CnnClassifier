@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
+        "chdir",
+        "ipynb",
         "levelname",
+        "pathlib",
         "venv"
     ]
 }
