@@ -160,4 +160,5 @@ cython_debug/
 
 # Pyre type checker
 .pyre/
-artifacts/*
+#  is used to ignore everything in the artifacts/ directory. 
+artifacts/* 

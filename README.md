@@ -36,7 +36,7 @@
   - create a st_01.ipynb in research folder.
   - Add data_ingestion and add Github adress :
      - https://github.com/farshidhesami/Branching-tutorial/raw/master/cat-dog-data.zip
-  - Fill a params.yaml example(key:val) after that we will add a right code .
+  - Fill a params.yaml example(key:val)- This part should not be empty and after that we will add a right code .
   
 
 ## Update entity  :
@@ -50,5 +50,7 @@
   - Write a data ingestion class.
   - Go back to root folder and run a code .(os.chdir("../"))
   - Run all code 
-  - Go to .gitignore and add a artifacts/* in end of code for help to Git Commit .
+  - Go to .gitignore and add a artifacts/* in end of code for help to Git Commit(is used to ignore everything in the artifacts/ directory) .
 
+## Update the components:
+  - sdf 
