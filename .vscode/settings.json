@@ -4,6 +4,7 @@
         "ipynb",
         "levelname",
         "pathlib",
+        "tqdm",
         "venv"
     ]
 }

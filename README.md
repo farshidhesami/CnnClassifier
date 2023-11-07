@@ -34,7 +34,7 @@
 ## Update config.yaml :
   - Go to config folder----> config.yaml
   - create a st_01.ipynb in research folder.
-  - Add data_ingestion and add Github adress :
+  - Add data_ingestion and add Github address :
      - https://github.com/farshidhesami/Branching-tutorial/raw/master/cat-dog-data.zip
   - Fill a params.yaml example(key:val)- This part should not be empty and after that we will add a right code .
   
@@ -53,4 +53,33 @@
   - Go to .gitignore and add a artifacts/* in end of code for help to Git Commit(is used to ignore everything in the artifacts/ directory) .
 
 ## Update the components:
-  - sdf 
+  - Create a file inside component " data_ingestion.py "  
+  - Create a file inside entity " config_entity.py " 
+  - Copy from "st_01.ipynb" code data class and paste to config_entity.py
+  - After that Update the configuration manager and Create a file in " config " a configuration.py 
+  - Copy from "st_01.ipynb" code configuration manager to "configuration.py" import read_yaml and constants and pathlib and os .
+  - Copy from "st_01.ipynb" code configuration manager to "configuration.py" code " class ConfigurationManager ".
+  - Go to the "entity" and inside a __init__.py add a code "DataIngestionConfig".
+  - Go to config and inside a "configuration.py" add a code cnnClassifier.entity import (DataIngestionConfig).
+
+  - Now Update the components:
+  - Go to "components" and inside a "data_ingestion.py" add a code from "st_01.ipynb" code "data_ingestion".
+  - Add a tqdm(Import the tqdm module for progress bars) and pathlib(Import the Path class from the pathlib module).
+  - Add a logger(Import a custom logger module) and get_size(Import a custom utility function for getting file size).
+  - Copy from "st_01.ipynb" code "class DataIngestion" code by modification and add a "logger" in previous code .
+
+  - Update the pipeline :
+  - Create a file inside a pipeline "stage_01_data_ingestion.py" and call a method from "st_01.ipynb" code "DataIngestion class".
+  - Go to the "config" and inside a __init__.py add a code "ConfigurationManager".
+  - Go to the "components" and inside a __init__.py add a code "DataIngestion" .
+  - Go to the  pipeline "stage_01_data_ingestion.py" add a code "DataIngestion" and " logger ".
+  - add a class DataIngestionTrainingPipeline in pipeline "stage_01_data_ingestion.py" .
+  - Try-Except Block Copy from "st_01.ipynb" .
+  
+  - Update the main.py :
+  - Create a main.py and input from pipeline "stage_01_data_ingestion.py" code into the main.py .
+  - Add a "DataIngestionTrainingPipeline" and "logger" .
+  - Lets Run a code ,But at first delete a "artifacts" folder.
+  - Go to Git Bash command and write a : python main.py
+  - We should see a all "running_logs" in logs folder .
+
