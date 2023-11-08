@@ -15,12 +15,3 @@ class DataIngestionTrainingPipeline:
         data_ingestion.unzip_and_clean()                               # Attempt to unzip and clean the downloaded file
         
         
-# Try-Except Block       
-try:
-    config = ConfigurationManager()
-    data_ingestion_config = config.get_data_ingestion_config()   
-    data_ingestion = DataIngestion(config=data_ingestion_config)
-    data_ingestion.download_file()
-    data_ingestion.unzip_and_clean()
-except Exception as e:
-    raise e

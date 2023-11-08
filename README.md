@@ -105,5 +105,24 @@
     - Total params: 14,764,866
     - Trainable params: 50,178
     - Non-trainable params: 14,714,688
-- Open a artifacts folder and we have other model " prepare_base_model" and inside folder : Training model ---->"base_model_updated.h5" and Base model----> "base_model.h5" 
+- Open a artifacts folder and we have other model " prepare_base_model" and inside folder : Training model ---->"base_model_updated.h5" and Base model----> "base_model.h5"
+
+## Create St_03 :
+ - Create a file inside component "prepare_base_model.py " .
+ - Copy from "st_02.ipynb" code @dataclass(frozen=True)-------> "class PrepareBaseModelConfig"  and paste to "config_entity.py" 
+ - Copy from "st_02.ipynb" in "class ConfigurationManager" code add code "def get_prepare_base_model_config" code into the config_entity.py" . 
+ - go to the "config" folder and add code in "configuration.py"-----> PrepareBaseModelConfig in code from cnnClassifier.entity import for active it go to next step.
+ - Go to the "entity" and inside a __init__.py add a code "PrepareBaseModelConfig" .
+
+## Update the components:
+- Go to the component "prepare_base_model.py " and Copy from "st_02.ipynb" in "PrepareBaseModel class" copy all code and paste to component "prepare_base_model.py ".
+- We have missing file and add into the code in  "pathlib" and "tensorflow" and "cnnClassifier.entity" .
+
+## Update the pipeline :
+- Create a file inside a pipeline "stage_02_prepare_base_model.py" and go to the "stage_01_data_ingestion.py" and copy all file and insted of "DataIngestionTrainingPipeline"---->  
+- ----- > add a "PrepareBaseModelTrainingPipeline" and change a code and go to "st_02.ipynb" and copy from "Test a model" and add code to "stage_02_prepare_base_model.py".
+- Go to the "components" and inside a __init__.py add a code "from cnnClassifier.components.prepare_base_model import PrepareBaseModel".
+- Go to the "main.py" and add a code "from ..... import PrepareBaseModelTrainingPipeline" and then add code "STAGE_NAME = "Prepare base model" .
+- For check a loggers , first delete a "artifacts" folder and open a Git Bash and Write a " python main.py".
+- Open a logs and see all loggs .
 - 
