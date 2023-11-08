@@ -31,6 +31,7 @@
 7. Update the pipeline 
 8. Update the main.py
 
+# Create St_01 :
 ## Update config.yaml :
   - Go to config folder----> config.yaml
   - create a st_01.ipynb in research folder.
@@ -68,7 +69,7 @@
   - Add a logger(Import a custom logger module) and get_size(Import a custom utility function for getting file size).
   - Copy from "st_01.ipynb" code "class DataIngestion" code by modification and add a "logger" in previous code .
 
-  - Update the pipeline :
+  ## Update the pipeline :
   - Create a file inside a pipeline "stage_01_data_ingestion.py" and call a method from "st_01.ipynb" code "DataIngestion class".
   - Go to the "config" and inside a __init__.py add a code "ConfigurationManager".
   - Go to the "components" and inside a __init__.py add a code "DataIngestion" .
@@ -76,10 +77,33 @@
   - add a class DataIngestionTrainingPipeline in pipeline "stage_01_data_ingestion.py" .
   - Try-Except Block Copy from "st_01.ipynb" .
   
-  - Update the main.py :
+  ## Update the main.py :
   - Create a main.py and input from pipeline "stage_01_data_ingestion.py" code into the main.py .
   - Add a "DataIngestionTrainingPipeline" and "logger" .
   - Lets Run a code ,But at first delete a "artifacts" folder.
   - Go to Git Bash command and write a : python main.py
   - We should see a all "running_logs" in logs folder .
 
+
+# Create St_02 :
+## Prepare the Base Model :
+- Go to research folder and create a "st_02.ipynb" 
+
+## Update config.yaml :
+- Go to "params.yaml" and add a code .
+- Go to config folder----> config.yaml add "prepare_base_model" .
+
+## Update the entity:
+- Go to the entity folder and inside "Config_entity.py" copy entity class into the "st_02.ipynb".
+- Copy from "st_01.ipynb" code configuration manager and add into the "st_02.ipynb" .
+- Copy from "st_01.ipynb" code Class "ConfigurationManager" and change base on "PrepareBaseModelConfig".
+
+## Update the components:
+- Add a library from "st_01.ipynb" and add code into as new.
+- Define a PrepareBaseModel class.(update_base_model and prepare_full_model ....)
+- Write a code for test a model base on "ConfigurationManager" and get_prepare_base_model_config .
+    - Total params: 14,764,866
+    - Trainable params: 50,178
+    - Non-trainable params: 14,714,688
+- Open a artifacts folder and we have other model " prepare_base_model" and inside folder : Training model ---->"base_model_updated.h5" and Base model----> "base_model.h5" 
+- 

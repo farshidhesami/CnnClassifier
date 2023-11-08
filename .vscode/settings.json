@@ -1,9 +1,11 @@
 {
     "cSpell.words": [
         "chdir",
+        "imagenet",
         "ipynb",
         "levelname",
         "pathlib",
+        "Softmax",
         "tqdm",
         "venv"
     ]
