@@ -125,4 +125,27 @@
 - Go to the "main.py" and add a code "from ..... import PrepareBaseModelTrainingPipeline" and then add code "STAGE_NAME = "Prepare base model" .
 - For check a loggers , first delete a "artifacts" folder and open a Git Bash and Write a " python main.py".
 - Open a logs and see all loggs .
-- 
+
+# Create St_03 :
+## Prepare Callbacks :
+- Go to the research folder and create a "st_03.ipynb" add basic code.
+
+
+## Update config.yaml :
+- Go to config folder----> config.yaml and add code "prepare_callbacks" 
+
+## Update the entity:
+- Add dataclasses code .
+- Add library "cnnClassifier.constants" and "cnnClassifier.utils" 
+
+## Define a configuration manager :
+- Add a class ConfigurationManager code .
+
+## Define a components:
+- Add a libraries
+- Define a PrepareCallback class
+- Define a Test model (config.get_prepare_callback_config).
+- Run a code 
+- Go to "artifacts" folder and "prepare_callbacks" created there and there are two folder "checkpoint_dir" and "tensorboard_log_dir" 
+-  
+
