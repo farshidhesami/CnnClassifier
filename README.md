@@ -147,5 +147,12 @@
 - Define a Test model (config.get_prepare_callback_config).
 - Run a code 
 - Go to "artifacts" folder and "prepare_callbacks" created there and there are two folder "checkpoint_dir" and "tensorboard_log_dir" 
--  
+- Go to "st_03.ipynb" into the "entity" code copy a "@dataclass(frozen=True)" code into the entity folder "config_entity.py" 
+- Go to the  entity folder "__init__.py" and add a code " PrepareCallbacksConfig" .
+- Go to "st_03.ipynb" into the Define a configuration manager copy def get_prepare_callback_config code and paste it into the Config folder and "configuration.py" ------->
+- -------->def get_prepare_callback_config(self) -> PrepareCallbacksConfig code  then add a "PrepareCallbacksConfig"  into the " from cnnClassifier.entity import" . 
 
+- Create a file inside a "components" as s  " prepare_callback.py " and copy a code from "st_03.ipynb"-----> components PrepareCallback class and paste to "prepare_callback.py" with
+  library code .
+- Go to the  "components" folder and in " __init__.py" folder add code : "...........import PrepareCallback"
+- No need to add a pipeline stage "PrepareCallback" ,because  PrepareCallback only responsible for Training and we will do in other stage as a "stage_03_training.py".
