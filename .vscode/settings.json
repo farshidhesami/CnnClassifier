@@ -6,9 +6,12 @@
         "imagenet",
         "ipynb",
         "levelname",
+        "logdir",
         "loggs",
         "pathlib",
         "Softmax",
+        "Staticmethod",
+        "tensorboard",
         "tqdm",
         "venv"
     ]

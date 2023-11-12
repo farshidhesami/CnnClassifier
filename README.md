@@ -156,3 +156,36 @@
   library code .
 - Go to the  "components" folder and in " __init__.py" folder add code : "...........import PrepareCallback"
 - No need to add a pipeline stage "PrepareCallback" ,because  PrepareCallback only responsible for Training and we will do in other stage as a "stage_03_training.py".
+
+# Create St_04 :
+## Training :
+- Go to the "research" and create a " st_04.ipynb " and add code for go to "cnnClassifier" .
+
+## Create a entity:
+- Make a data class and base on create a "entity " code .
+
+## Update config.yaml :
+- Go to config folder----> config.yaml and add code "training" .
+
+## Training :
+ Go to the  " st_04.ipynb " folder and write a library .
+
+ ## Define a configuration manager class :
+- Add a code from "st_03.ipynb" class ConfigurationManager into the " st_04.ipynb " and then add training related configuration class into the code .
+- Add a code from "st_03.ipynb" library  for class PrepareCallback at first add a: "import time"
+- Then create a PrepareCallback class base on "st_03.ipynb" and copy and paste .
+- Create a Training Components and copy code from "st_03.ipynb" library .
+- Create a " class training " and  then "def get_base_model" and then add a "def train_valid_generator" 
+  for image classification and "Staticmethod" and "Training method".
+- Add a code from "st_03.ipynb" Test a model and add a "Training config" into the code .
+- Check a "artifacts" and we have a "training" folder and inside it------> model.h5
+
+- To see a prepare_callbacks : Go to the "artifacts" folder and "prepare_callbacks" folder
+  and open a "tensorboard_log_dir" for run and see a log -----> Git Bash write a commend : 
+  " tensorboard --logdir=artifacts/prepare_callbacks/tensorboard_log_dir/ "
+
+- This message appear :
+  Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
+  TensorBoard 2.10.0 at http://localhost:6006/ (Press CTRL+C to quit)
+
+
