@@ -189,3 +189,26 @@
   TensorBoard 2.10.0 at http://localhost:6006/ (Press CTRL+C to quit)
 
 
+# Create Training :
+- Go to the SRC --------> Components --------> Create a "training.py" 
+
+## Create a entity:
+- Add a code from  "st_04.ipynb" and copy "Entity" @dataclass and copy to "entity"--------> config_entity.py .
+- Go to the "entity"--------> __init__.py and add a code " TrainingConfig ".
+
+
+## Define a configuration manager class :
+- Add a code from "st_04.ipynb" and copy code into the configuration manager def get_training_config .after that add entity code into the "from cnnClassifier.entity import" .
+
+## Define a Training Components :
+- Add a code from  "st_04.ipynb" training components and add into the "training.py" . At first add a library like: "cnnClassifier" and "tensorflow" and "pathlib" then all 
+  "class Training" code into the "training.py" .
+
+## Update the pipeline :
+- I need a create a file into the "pipeline"-------> "stage_03_training.py" 
+- After that go to the "components" folder and add a code into the "__init__.py" code "from cnnClassifier.components.training import Training" 
+- Go to the "stage_03_training.py" and add a code "ConfigurationManager" and "PrepareCallback, Training" and "logger" .
+- Go to the "stage_02_prepare_base_model.py" and copy a "class PrepareBaseModelTrainingPipeline" and modification base on new "stage_03_training.py".
+
+- Go to the "main.py" and then add a "cnnClassifier.pipeline.stage_03_training " code  "STAGE_NAME = "Training" 
+- For test a code delete a "artifacts" folder and then open a terminal "python main.py" and "training" model created .
