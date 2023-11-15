@@ -170,7 +170,7 @@
 ## Training :
  Go to the  " st_04.ipynb " folder and write a library .
 
- ## Define a configuration manager class :
+## Define a configuration manager class :
 - Add a code from "st_03.ipynb" class ConfigurationManager into the " st_04.ipynb " and then add training related configuration class into the code .
 - Add a code from "st_03.ipynb" library  for class PrepareCallback at first add a: "import time"
 - Then create a PrepareCallback class base on "st_03.ipynb" and copy and paste .
@@ -212,3 +212,25 @@
 
 - Go to the "main.py" and then add a "cnnClassifier.pipeline.stage_03_training " code  "STAGE_NAME = "Training" 
 - For test a code delete a "artifacts" folder and then open a terminal "python main.py" and "training" model created .
+
+# Create model evaluation :
+- Go to the "research" folder and create a "st_05.ipynb" and add a code .
+- add a "import tensorflow as tf". in code .
+- Need to load "training model" into the "artifacts" folder "training------> model.h5 .
+- Load a model in "training" folder .
+
+## Create a entity:
+- Copy a code from "st_04.ipynb" and copy "Entity" @dataclass.
+- After that import a library and add a "save_json" into the code . 
+
+## Define a configuration manager class :
+- Add a code from "st_04.ipynb" and copy code into the configuration manager def "def get_validation_config(self) -> EvaluationConfig:" .
+
+## Create a Components :
+- Create a "class Evaluation" and "valid_generator" and "valid_datagenerator" and "evaluation method" .
+
+
+## Write a  pipeline :
+- Test a model and add a "ConfigurationManager" and "Run a evaluation method".
+- you must see a "INFO: common: json file saved at: scores.json" after run .
+- After that open a "scores.json" file and see a "loss" and "accuracy" result .

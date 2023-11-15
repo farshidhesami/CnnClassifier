@@ -3,6 +3,7 @@
         "chdir",
         "dataclass",
         "dataclasses",
+        "datagenerator",
         "imagenet",
         "ipynb",
         "levelname",
