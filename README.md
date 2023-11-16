@@ -234,3 +234,22 @@
 - Test a model and add a "ConfigurationManager" and "Run a evaluation method".
 - you must see a "INFO: common: json file saved at: scores.json" after run .
 - After that open a "scores.json" file and see a "loss" and "accuracy" result .
+
+## Go to Components
+- create a "evaluation.py"  inside Components . 
+- Go to the "stage_05" for copy entity and copy in "entity" folder ----> "config_entity.py"  (just delete a "all_params: dict" code ) and change a 
+  "path_of_model=self.config.training.trained_model_path," and "training_data=self.config.data_ingestion.unzip_dir," .
+- Go to the "config" folder ----> "configuration.py" and inside configuration manager copy code "def get_validation_config(self)".
+- After that add a code as "EvaluationConfig" in "from cnnClassifier.entity import" and then Go to the "entity"--------> __init__.py and add a code "EvaluationConfig".
+
+## Update a Components :
+- Go to the Components folder "evaluation.py" and import a library .
+- Go to the "stage_05" and copy from Components "class Evaluation" and paste into the "evaluation.py" .
+- After that go to the "components" folder and add a code into the "__init__.py" code "from cnnClassifier.components.evaluation import Evaluation".
+
+## Update the pipeline :
+- Create a file into the "pipeline" -------> "stage_04_evaluation.py" and copy code base on "stage_03_training.py" and insted of "PrepareCallback, Training" add 
+  a "Evaluation" and "EvaluationPipeline" and delete some code and add code from "st_05.ipynb" add code "Test Model-pipeline" .
+
+- Go to the "main.py" and then add a "from cnnClassifier.pipeline.stage_04_evaluation import EvaluationPipeline " code  "STAGE_NAME = "Evaluation stage"" .
+- For test a code delete a "artifacts" folder and "scores.json" then open a terminal "python main.py" and "training" model created .
