@@ -117,13 +117,13 @@ def get_size(path: Path) -> str:
     return f"~ {size_in_kb} KB"
 
 
-def decodeImage(imgstring, fileName):
+def decodeImage(imgstring, fileName):                         # DecodeImage Method
     imgdata = base64.b64decode(imgstring)
     with open(fileName, 'wb') as f:
         f.write(imgdata)
         f.close()
 
 
-def encodeImageIntoBase64(croppedImagePath):
+def encodeImageIntoBase64(croppedImagePath):                  # EncodeImage Method
     with open(croppedImagePath, "rb") as f:
         return base64.b64encode(f.read())

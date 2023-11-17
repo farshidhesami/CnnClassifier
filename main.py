@@ -7,7 +7,7 @@ from cnnClassifier import logger
 
 
 
-STAGE_NAME = "Data Ingestion stage"
+STAGE_NAME = "Data Ingestion stage"                  # Data Ingestion methods
 try:
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
    data_ingestion = DataIngestionTrainingPipeline()
@@ -18,7 +18,7 @@ except Exception as e:
         raise e
 
 
-STAGE_NAME = "Prepare base model"
+STAGE_NAME = "Prepare base model"                      # Base model methods
 try: 
    logger.info(f"*******************")
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
@@ -30,7 +30,7 @@ except Exception as e:
         raise e
 
 
-STAGE_NAME = "Training"
+STAGE_NAME = "Training"                                # Training methods
 try: 
    logger.info(f"*******************")
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
@@ -42,7 +42,7 @@ except Exception as e:
         raise e
 
 
-STAGE_NAME = "Evaluation stage"
+STAGE_NAME = "Evaluation stage"                         # Evaluation methods
 try:
    logger.info(f"*******************")
    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")

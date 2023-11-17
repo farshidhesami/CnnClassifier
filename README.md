@@ -253,3 +253,39 @@
 
 - Go to the "main.py" and then add a "from cnnClassifier.pipeline.stage_04_evaluation import EvaluationPipeline " code  "STAGE_NAME = "Evaluation stage"" .
 - For test a code delete a "artifacts" folder and "scores.json" then open a terminal "python main.py" and "training" model created .
+
+
+## Create a prediction pipeline (user upload a pic and prediction) :
+- create a "app.py" for make a application and training and prediction result and we will use  a "flask"
+  to create a api and HTML code.
+- we install a "Flask" and "Flask-Cors" in "requirements.txt" (Be carfull for install it).
+- Create a " templates " folder for HTML (index.html) code  .
+- Create a "index.html" in templates.
+- For "index.html" sample just go to the : https://getbootstrap.com/docs/5.3/examples/
+
+## Pipeline prediction :
+- Go to the SRC --------> "pipeline" folder and create a "predict.py" and add library.
+- Add a "class DogCat" into the "predict.py" then add a "def predictiondogcat" into the code .
+- Go to the utils --------> "common.py" file and add a code  "def decodeImage"  and "encodeImageIntoBase64" .
+- after that import in utils --------> "common.py" library "import base64" .
+- Go to the "app.py" and add a code .
+
+## Test a app.py
+- Go to the Git Bash and write a " python app.py "
+- Copy this link after result " http://127.0.0.1:8080  "  ctrl + right click
+- Object Classification Html page appear . 
+
+## Test a app.py with add a "http://127.0.0.1:8080/train"
+- Before test delete a "artifacts" and "scores.json" 
+- See error appear in Git bash "OSError: No file or directory found at artifacts\training\model.h5" .
+- Go to the html and add a "/train" --> "http://127.0.0.1:8080/train" after that "artifacts" and "scores.json"
+  created again  and after complete we see in "artifacts------>training------> model.h5 file .
+- Once again check a Cat or Dog image and see predict result .
+
+## Note : This */train related to "app.py" code : 
+   - @app.route("/train", methods=['GET','POST'])
+   - @cross_origin()
+   - def trainRoute():
+       -  os.system("python main.py")
+       -  return "Training done successfully!"  ---------> After complete we will see in "html" page .
+

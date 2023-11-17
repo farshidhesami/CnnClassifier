@@ -1,15 +1,18 @@
 {
     "cSpell.words": [
+        "carfull",
         "chdir",
         "dataclass",
         "dataclasses",
         "datagenerator",
+        "Iinitialize",
         "imagenet",
         "ipynb",
         "levelname",
         "logdir",
         "loggs",
         "pathlib",
+        "predictiondogcat",
         "Softmax",
         "Staticmethod",
         "tensorboard",
