@@ -364,13 +364,3 @@ newgrp docker
 
 
 
-
-- lets create a "Dockerfile" .
-- Add a Docker commands in file . use a (AES CLI) in code .
-       - Amazon Web Services Command Line Interface (AWS CLI) This is a Docker image for the AWS CLI. 
-       - It is a unified command line tool to interact with AWS services and manage your AWS resources.
-- Go to the "workflows" folder and create a " main.yaml "  and if ".gitkeep " file exist delete it .
-- Add a code in " main.yaml " 
-   - (This workflow is designed for continuous integration and deployment (CI/CD). It   performs code quality checks, runs tests, builds a Docker image, pushes it to Amazon ECR, and then deploys this image, likely to an AWS ECS service.)
-   - "main.yaml" file you provided is a GitHub Actions workflow configuration designed to automate the following tasks .
-   - Continuous Integration (CI) :   
